@@ -1,2 +1,3 @@
 # ProjetFinalRCW
-PROJET TIINDER POUR RECRUTEMENT
+PROJET TINDER POUR RECRUTEMENT
+Equipe: Hind Elkhalifi, Mounir Maouhoub, Imane Kias, Naoufal Nasri 
