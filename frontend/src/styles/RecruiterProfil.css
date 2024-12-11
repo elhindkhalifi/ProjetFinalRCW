@@ -1,0 +1,152 @@
+/* Conteneur principal */
+.pagep-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Conteneur de profil */
+.profile-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Titre */
+.profile-title {
+  text-align: center;
+  font-size: 24px;
+  color: #ffa726;
+  margin-bottom: 30px;
+}
+
+/* Contenu en grille */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Section pour l'avatar */
+.avatar-section {
+  text-align: center;
+}
+
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-icon {
+  width: 50%;
+  height: 50%;
+  fill: #ffa726;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informations */
+.info-section {
+  text-align: center;
+}
+
+.info-item {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Bouton retour */
+.back-button {
+  background: linear-gradient(90deg, #ff6a6a, #ffa726);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+/* Formulaire */
+.profile-right {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ffa726;
+}
+
+.input-disabled,
+.input-enabled {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.input-enabled:focus {
+  outline: none;
+  border: 2px solid #ffa726;
+}
+
+/* Bouton mise à jour */
+.update-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff6a6a, #ffa726);
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.update-button:hover {
+  transform: scale(1.05);
+}

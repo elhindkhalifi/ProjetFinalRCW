@@ -1,0 +1,153 @@
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.profile-title {
+  color: #0052a3;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.avatar-section {
+  text-align: center;
+}
+
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.avatar-circle:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-icon {
+  width: 50%;
+  height: 50%;
+  fill: #bbb;
+}
+
+.cv-section {
+  margin-top: 30px;
+}
+
+.cv-upload-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0052a3;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cv-upload-button:hover {
+  background-color: #0077cc;
+  transform: scale(1.05);
+}
+
+.cv-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0052a3;
+}
+
+.update-button {
+  display: block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #0052a3;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.update-button:hover {
+  background-color: #0077cc;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cv-upload-button {
+    width: 100%;
+  }
+}

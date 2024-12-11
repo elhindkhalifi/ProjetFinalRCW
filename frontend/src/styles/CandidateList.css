@@ -1,0 +1,24 @@
+.container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.candidateCard {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.candidateName {
+  font-size: 20px;
+  color: #0052a3;
+}
+
+.candidateSkills {
+  font-size: 14px;
+  color: #333;
+}

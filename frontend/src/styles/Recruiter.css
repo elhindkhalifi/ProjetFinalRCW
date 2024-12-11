@@ -1,0 +1,254 @@
+/* Variables CSS */
+:root {
+  --primary-color: #004b93;
+  --secondary-color: #1a1a1a;
+  --accent-color: #0066cc;
+  --text-color-light: #fff;
+  --text-color-muted: #666;
+  --background-color: #000;
+  --border-radius: 8px;
+  --transition-duration: 0.3s;
+}
+
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+}
+
+/* Main Container */
+.main-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+/* Navbar */
+.main-nav {
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav h1 {
+  color: var(--text-color-light);
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text-color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-duration) ease;
+}
+
+.nav-icon:hover {
+  opacity: 0.8;
+}
+
+/* Search Layout */
+.search-layout {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+.filters-sidebar h3 {
+  color: var(--text-color-light);
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h4 {
+  color: var(--text-color-light);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-options label {
+  color: var(--text-color-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Search Main */
+.search-main {
+  flex: 1;
+}
+
+/* Search Bar */
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 8px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  color: var(--text-color-light);
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+/* Filter/Search Buttons */
+.filter-search-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.filter-button,
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  height: 100%;
+  color: var(--text-color-light);
+}
+
+.filter-button:hover,
+.search-button:hover {
+  background-color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Fields */
+.form-group label {
+  color: var(--accent-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: var(--border-radius);
+  color: var(--text-color-light);
+}
+
+.input-disabled {
+  background-color: #2a2a2a;
+  color: var(--text-color-muted);
+  cursor: not-allowed;
+}
+
+/* Back Button */
+.back-button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+  border: none;
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.back-button:hover {
+  background-color: #004080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+  }
+
+  .profile-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}

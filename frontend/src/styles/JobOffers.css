@@ -1,0 +1,22 @@
+.container {
+  margin: 20px;
+  padding: 20px;
+}
+
+.offerCard {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.offerTitle {
+  font-size: 20px;
+  color: #0052a3;
+}
+
+.offerDescription {
+  font-size: 14px;
+  color: #333;
+}

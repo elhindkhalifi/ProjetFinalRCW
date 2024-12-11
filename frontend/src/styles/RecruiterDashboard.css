@@ -1,0 +1,361 @@
+/* General Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(120deg, #001f3f, #0074d9);
+  color: #eaeaea;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navigation Bar */
+.dashboard-nav {
+  background: linear-gradient(90deg, #003366, #0052a3);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icon {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.nav-icon:hover {
+  transform: rotate(20deg);
+  color: #ffcc00;
+}
+
+/* Search Bar */
+.search-overlay {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 1px solid #00bcd4;
+  box-shadow: 0 0 10px #00bcd4;
+}
+
+.close-search {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-search:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  margin-top: 120px;
+  padding: 40px;
+  overflow-y: auto;
+  flex-grow: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Candidate Cards */
+.candidates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.candidate-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transform: scale(1.05) rotate(1deg);
+}
+
+.candidate-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.candidate-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+.contact-button {
+  background: linear-gradient(45deg, #ff6a00, #ffa500);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background: linear-gradient(45deg, #ffa500, #ff6a00);
+  transform: scale(1.1);
+}
+
+/* Add Job Button */
+.add-job-button {
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.add-job-button:hover {
+  background: linear-gradient(45deg, #81c784, #4caf50);
+  transform: translateY(-3px);
+}
+
+/* Job Form */
+.job-form {
+  margin-top: 30px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.job-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.job-form div {
+  margin-bottom: 20px;
+}
+
+.job-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.job-form input,
+.job-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-form input:focus,
+.job-form textarea:focus {
+  outline: none;
+  border: 1px solid #00bcd4;
+  box-shadow: 0 0 10px #00bcd4;
+}
+
+.job-form button {
+  background: linear-gradient(45deg, #2196f3, #03a9f4);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.job-form button:hover {
+  background: linear-gradient(45deg, #03a9f4, #2196f3);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .candidates-list {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .add-job-button {
+    width: 100%;
+  }
+}
+
+/* filtre */
+
+.filters-container {
+  position: fixed;
+  top: 10px; /* Distance depuis le haut */
+  left: 10px; /* Distance depuis la gauche */
+  padding: 10px; /* Ajustement de la marge interne */
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  max-width: 200px; /* Largeur réduite */
+  z-index: 1000;
+}
+
+.filters-container h3 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.filters-container div {
+  margin-bottom: 10px; /* Espacement réduit entre les champs */
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-container label {
+  font-weight: 500;
+  margin-bottom: 5px; /* Alignement précis avec le champ */
+  color: #555;
+  font-size: 12px;
+}
+
+.filters-container input,
+.filters-container select {
+  width: 100%;
+  padding: 6px; /* Taille réduite pour les champs */
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #fafafa;
+  color: #333;
+  box-sizing: border-box; /* Assure que la largeur inclut padding et bordures */
+  transition: all 0.3s ease;
+}
+
+.filters-container input:focus,
+.filters-container select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
