@@ -1,0 +1,60 @@
+# LangChain Libraries
+langchain
+langchain-community
+langchain-openai
+langchain_pinecone
+langchain[docarray]
+
+# Document Processing
+docarray
+pypdf
+
+# Pydantic for Data Validation
+pydantic==1.10.8
+
+# YouTube Video Processing (Optional)
+pytubefix
+
+# Environment Variables
+python-dotenv
+
+# Token Counting and Processing
+tiktoken
+
+# Pinecone for Vector Storage
+pinecone-client
+
+# Machine Learning and NLP
+scikit-learn
+scipy
+transformers
+nltk
+
+# Linting and Code Style
+ruff
+
+# Optional: Whisper for Speech-to-Text
+git+https://github.com/openai/whisper.git
+
+# Additional Dependencies for NLP or AI
+openai
+
+fastapi
+uvicorn
+python-dotenv
+PyPDF2
+langchain
+openai
+jose
+sqlalchemy
+passlib[bcrypt]
+pydantic
+fastapi[all]
+cryptography
+faiss-cpu
+pandas
+datetime
+uuid
+requests
+jsonschema
+
